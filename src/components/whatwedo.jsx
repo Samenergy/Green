@@ -23,9 +23,9 @@ const features = [
 
 export default function Services() {
   return (
-    <div className="bg-gray-50 lg:py-2 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 flex items-center gap-20">
-        <div className="mx-auto max-w-2xl lg:text-left">
+    <div className="bg-gray-50 py-12 sm:py-20 lg:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+        <div className="mx-auto max-w-2xl text-center lg:text-left">
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Full Range of Web Design Services
           </p>
@@ -34,12 +34,12 @@ export default function Services() {
             help your business attract more visitors and keep them on your site!
           </p>
         </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-0 lg:max-w-4xl">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
             {features.map((feature) => (
-              <div key={feature.name} className="relative pl-16">
+              <div key={feature.name} className="relative pl-12 lg:pl-16">
                 <dt className="text-base font-bold leading-7 text-gray-900">
-                  <div className="absolute left-0 top-2 flex h-5 w-5 items-center  justify-center rounded-lg bg-[#37af65]"></div>
+                  <div className="absolute left-0 top-2 flex h-5 w-5 items-center justify-center rounded-lg bg-[#37af65]"></div>
                   {feature.name}
                 </dt>
                 <dd className="mt-2 text-base leading-7 text-gray-600">

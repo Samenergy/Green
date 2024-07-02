@@ -1,7 +1,13 @@
-body{
-    background-image: url(../assets/hero-bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    
+.hero-bg {
+  background-image: url(../assets/hero-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
+@media (max-width: 1024px) {
+  .text-left {
+    text-align: center;
+    margin-left: 0;
+  }
 }

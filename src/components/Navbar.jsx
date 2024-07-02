@@ -1,5 +1,4 @@
 import React, { useState, useEffect, Fragment } from "react";
-
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import {
   ArrowPathIcon,
@@ -18,27 +17,23 @@ const Services = [
     description:
       "We create bespoke websites tailored to your unique brand identity and goals.",
     href: "#",
-    
   },
   {
     name: "Responsive Development",
     description: "Our websites are built to adapt seamlessly to all devices",
     href: "#",
-    
   },
   {
     name: "Sustainable Practices",
     description:
       "We incorporate eco-friendly design principles and utilize renewable resources",
     href: "#",
-    
   },
   {
     name: "Ongoing Support",
     description:
       "We offer comprehensive maintenance and support services to keep your website running smoothly.",
     href: "#",
-    
   },
 ];
 
@@ -65,7 +60,7 @@ export default function Navbar() {
   }, [scrolled]);
 
   return (
-    <header className="bg-white ">
+    <header className="bg-white">
       <nav
         className={`mx-auto flex items-center p-6 lg:px-20 fixed w-full text-white z-50 ${
           scrolled ? "bg-black" : "bg-transparent"
@@ -73,26 +68,26 @@ export default function Navbar() {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-mt-5 p-1.5 ">
+          <a href="#" className="-mt-5 p-1.5">
             <span className="sr-only"></span>
             <p className="text-2xl font-bold">
-              GREEN <span className="font-normal ">Arts</span>{" "}
-              <span className="text-[#37af65] text-5xl -ml-1 ">.</span>{" "}
+              GREEN <span className="font-normal">Arts</span>{" "}
+              <span className="text-[#37af65] text-5xl -ml-1">.</span>{" "}
             </p>
           </a>
         </div>
-        <div className="flex lg:hidden">
+        <div className="flex items-center lg:hidden ml-auto">
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+            <Bars3Icon className="h-6 w-6 text-white" aria-hidden="true" />
           </button>
         </div>
 
-        <Popover.Group className="hidden lg:flex lg:gap-x-28 ">
+        <Popover.Group className="hidden lg:flex lg:gap-x-28 ml-auto">
           <a href="#" className="text-sm font-semibold leading-6 text-gray-50">
             Home
           </a>
@@ -121,9 +116,7 @@ export default function Navbar() {
                       key={item.name}
                       className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                     >
-                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                        
-                      </div>
+                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"></div>
                       <div className="flex-auto">
                         <a
                           href={item.href}
@@ -132,7 +125,9 @@ export default function Navbar() {
                           {item.name}
                           <span className="absolute inset-0" />
                         </a>
-                        <p className="mt-1 text-gray-600">{item.description}</p>
+                        <p className="mt-1 text-gray-600">
+                          {item.description}
+                        </p>
                       </div>
                     </div>
                   ))}
@@ -160,11 +155,11 @@ export default function Navbar() {
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-mt-5 p-1.5 ">
+            <a href="#" className="-mt-5 p-1.5">
               <span className="sr-only">Your Company</span>
               <p className="text-2xl font-bold">
-                GREEN <span className="font-normal ">Arts</span>{" "}
-                <span className="text-[#37af65] text-5xl -ml-1 ">.</span>{" "}
+                GREEN <span className="font-normal">Arts</span>{" "}
+                <span className="text-[#37af65] text-5xl -ml-1">.</span>{" "}
               </p>
             </a>
             <button
@@ -186,7 +181,7 @@ export default function Navbar() {
                         href="#"
                         className="-mx-3 block rounded-lg px-6 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-100"
                       >
-                        Company
+                        Home
                       </a>
                       <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-100">
                         Services
@@ -217,13 +212,19 @@ export default function Navbar() {
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-100"
                 >
-                  Features
+                  About
                 </a>
                 <a
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-100"
                 >
-                  Marketplace
+                  Pricing
+                </a>
+                <a
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-100"
+                >
+                  Contact
                 </a>
               </div>
             </div>
